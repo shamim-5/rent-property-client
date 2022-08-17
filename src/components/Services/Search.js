@@ -1,6 +1,8 @@
 import React from "react";
 
 const Search = () => {
+
+   
   return (
     <div className="flex lg:flex-row flex-col justify-between py-4  border border-x-0  border-[#1D2534]">
       <div className="space-y-2 my-2 text-center">

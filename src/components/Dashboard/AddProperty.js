@@ -15,7 +15,7 @@ const AddProperty = () => {
       bed: e.target.bed.value,
       bath: e.target.bath.value,
       length: e.target.length.value,
-      Width: e.target.width.value,
+      width: e.target.width.value,
       img: e.target.img.value,
       details: e.target.details.value,
     };

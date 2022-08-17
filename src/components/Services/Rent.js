@@ -14,13 +14,13 @@ const Rent = () => {
           <input type="text" placeholder="Search with Search Bar" className="px-4 rounded py-2" />
         </div>
 
-        <Search />
+        <Search services={services} setServices={setServices} />
       </section>
 
       <section className="grid lg:grid-cols-3 gap-6">
         {services &&
           services.map((service) => {
-            const { id, location, date, price, type, name, address, bed, bath, size, img, review } = service;
+            const { id, location, date, price, type, name, address, bed, bath, length, width, img, review } = service;
 
             return (
               <div key={id}>
@@ -33,9 +33,7 @@ const Rent = () => {
                       <h2>
                         <span className="font-bold text-secondary">${price}</span> /month
                       </h2>
-                      <div>
-                        <p>Star</p>
-                      </div>
+                      <div>{review && <p>{review} Star</p>}</div>
                     </div>
                     <h2 className="card-title text-levender">{name}</h2>
                     <p>{address}</p>
@@ -56,11 +54,13 @@ const Rent = () => {
                       <div>
                         <p className="flex space-x-1">
                           <img src="https://img.icons8.com/nolan/16/00000/square.png" alt="" />
-                          <span>{size}m²</span>
+                          <span>
+                            {length}x{width}m²
+                          </span>
                         </p>
                       </div>
-                      <button className="btn btn-sm btn-primary">Buy Now</button>
                     </div>
+                    <button className="btn btn-sm btn-primary rounded">Buy Now</button>
                   </div>
                 </div>
               </div>
