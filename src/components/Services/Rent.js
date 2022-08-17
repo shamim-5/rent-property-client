@@ -33,21 +33,24 @@ const Rent = () => {
                     <hr />
                     <div class="flex justify-between items-center">
                       <div>
-                        <p>
+                        <p className="flex space-x-1">
+                          <img src="https://img.icons8.com/officexs/16/000000/bedroom.png" alt="" />
                           <span>{bed} Beds</span>
                         </p>
                       </div>
                       <div>
-                        <p>
+                        <p className="flex space-x-1">
+                          <img src="https://img.icons8.com/office/16/000000/shower.png" alt="" />
                           <span>{bath} Bathrooms</span>
                         </p>
                       </div>
                       <div>
-                        <p>
+                        <p className="flex space-x-1">
+                          <img src="https://img.icons8.com/nolan/16/00000/square.png" alt="" />
                           <span>{size}m²</span>
                         </p>
                       </div>
-                      <button class="btn btn-primary">Buy Now</button>
+                      <button class="btn btn-sm btn-primary">Buy Now</button>
                     </div>
                   </div>
                 </div>
