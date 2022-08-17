@@ -3,7 +3,23 @@ import React from "react";
 const AddProperty = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("yeh");
+
+    const service = {
+      code: e.target.code.value,
+      location: e.target.location.value,
+      date: e.target.date.value,
+      price: e.target.price.value,
+      type: e.target.type.value,
+      name: e.target.name.value,
+      address: e.target.address.value,
+      bed: e.target.bed.value,
+      bath: e.target.bath.value,
+      length: e.target.length.value,
+      Width: e.target.width.value,
+      img: e.target.img.value,
+      details: e.target.details.value,
+    };
+    console.log(service);
   };
   return (
     <div>
@@ -22,18 +38,19 @@ const AddProperty = () => {
                       <label className="label">
                         <span className="label-text text-grey">Property Code</span>
                       </label>
-                      <input type="text" name="code" placeholder="Property Code" className="input input-bordered" />
+                      <input type="number" name="code" placeholder="Property Code" className="input input-bordered" />
                     </div>
-                    <div className="form-control">
+                    <div className="form-control w-full">
                       <label className="label">
                         <span className="label-text text-grey">Location</span>
                       </label>
-                      <input
-                        type="text"
-                        name="location"
-                        placeholder="Enter Location"
-                        className="input input-bordered"
-                      />
+                      <select name="location" className="select select-bordered w-full">
+                        <option selected>New York, USA</option>
+                        <option>Arlington, Texas</option>
+                        <option>Centerville, Georgia</option>
+                        <option>Lebanon, Ohio</option>
+                        <option>Washington, D.C.</option>
+                      </select>
                     </div>
                     <div className="form-control w-full">
                       <label className="label">
@@ -45,15 +62,18 @@ const AddProperty = () => {
                       <label className="label">
                         <span className="label-text text-grey">Price</span>
                       </label>
-                      <input type="text" name="price" placeholder="Enter Price" className="input input-bordered" />
+                      <input type="number" name="price" placeholder="Enter Price" className="input input-bordered" />
                     </div>
                   </div>
                   <div className="flex lg:flex-row flex-col lg:space-x-4 ">
-                    <div className="form-control">
+                    <div className="form-control w-full">
                       <label className="label">
                         <span className="label-text text-grey">Type</span>
                       </label>
-                      <input type="text" name="type" placeholder="Enter Type" className="input input-bordered" />
+                      <select name="type" className="select select-bordered  w-full">
+                        <option selected>House</option>
+                        <option>Flat</option>
+                      </select>
                     </div>
                     <div className="form-control">
                       <label className="label">
@@ -71,7 +91,7 @@ const AddProperty = () => {
                       <label className="label">
                         <span className="label-text text-grey">Bed</span>
                       </label>
-                      <input type="text" name="bed" placeholder="Noumber of Bed" className="input input-bordered" />
+                      <input type="number" name="bed" placeholder="Noumber of Bed" className="input input-bordered" />
                     </div>
                   </div>
                   <div className="flex lg:flex-row flex-col lg:space-x-4 ">
@@ -79,13 +99,29 @@ const AddProperty = () => {
                       <label className="label">
                         <span className="label-text text-grey">Bathroom</span>
                       </label>
-                      <input type="text" name="bath" placeholder="No of Bathroom" className="input input-bordered" />
+                      <input type="number" name="bath" placeholder="No of Bathroom" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text text-grey">Size</span>
+                        <span className="label-text text-grey">Length</span>
                       </label>
-                      <input type="text" name="size" placeholder="Area of Property" className="input input-bordered" />
+                      <input
+                        type="number"
+                        name="length"
+                        placeholder="Length of Property"
+                        className="input input-bordered"
+                      />
+                    </div>
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text text-grey">Width</span>
+                      </label>
+                      <input
+                        type="number"
+                        name="width"
+                        placeholder="Width of Property"
+                        className="input input-bordered"
+                      />
                     </div>
                     <div className="form-control">
                       <label className="label">
@@ -99,9 +135,18 @@ const AddProperty = () => {
                       />
                     </div>
                   </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text text-grey">Description</span>
+                    </label>
+                    <textarea
+                      name="details"
+                      placeholder="Add property description..."
+                      className="rounded-lg px-4 py-1"
+                    ></textarea>
+                  </div>
                 </div>
                 <div className="form-control mt-6">
-                  {/* <button className="btn btn-primary">Add Property</button> */}
                   <input type="submit" value="Add Property" className="btn btn-primary" />
                 </div>
               </form>

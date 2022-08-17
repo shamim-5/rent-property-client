@@ -6,12 +6,11 @@ const Search = () => {
       <div className="space-y-2 my-2 text-center">
         <h3 className="text-steel">Location</h3>
         <select className="select select-bordered select-sm  w-full bg-transparent">
-          <option disabled selected>
-            New York, USA
-          </option>
-          <option>Small Apple</option>
-          <option>Small Orange</option>
-          <option>Small Tomato</option>
+          <option selected>New York, USA</option>
+          <option>Arlington, Texas</option>
+          <option>Centerville, Georgia</option>
+          <option>Lebanon, Ohio</option>
+          <option>Washington, D.C.</option>
         </select>
       </div>
       <div className="space-y-2 my-2 text-center">
@@ -21,23 +20,17 @@ const Search = () => {
       <div className="space-y-2 my-2 text-center">
         <h3 className="text-steel">Price</h3>
         <select className="select select-bordered select-sm  w-full bg-transparent">
-          <option disabled selected>
-            $5000-$25000
-          </option>
-          <option>Small Apple</option>
-          <option>Small Orange</option>
-          <option>Small Tomato</option>
+          <option selected>$0000-$25000</option>
+          <option>$25000-$50000</option>
+          <option>$50000-$100000</option>
+          <option>$100000-$20000000</option>
         </select>
       </div>
       <div className="space-y-2 my-2 text-center">
         <h3 className="text-steel">Property Type</h3>
         <select className="select select-bordered select-sm  w-full bg-transparent">
-          <option disabled selected>
-            House
-          </option>
-          <option>Small Apple</option>
-          <option>Small Orange</option>
-          <option>Small Tomato</option>
+          <option selected>House</option>
+          <option>Flat</option>
         </select>
       </div>
       <button className="btn btn-primary my-auto">Search</button>
