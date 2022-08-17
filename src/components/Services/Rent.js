@@ -20,7 +20,7 @@ const Rent = () => {
       <section className="grid lg:grid-cols-3 gap-6">
         {services &&
           services.map((service) => {
-            const { id, location, date, price, type, name, address, bed, bath, length, width, img, review } = service;
+            const { id, price, type, name, address, date, bed, bath, length, width, img, review } = service;
 
             return (
               <div key={id}>
@@ -35,8 +35,11 @@ const Rent = () => {
                       </h2>
                       <div>{review && <p>{review} Star</p>}</div>
                     </div>
-                    <h2 className="card-title text-levender">{name}</h2>
+                    <h2 className="card-title text-levender">
+                      {name} || {type}
+                    </h2>
                     <p>{address}</p>
+                    <p>Available from ... {date}</p>
                     <hr />
                     <div className="flex justify-between items-center">
                       <div>
