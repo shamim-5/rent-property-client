@@ -1,14 +1,72 @@
-[{
-  "id": 1,
-  "location": "New York, USA",
-  "date": "12-08-20",
-  "price": "2095",
-  "type": "House",
-  "name": "Palm Harbor",
-  "address": "2699 Green Valley Highland, FL",
-  "bed": "4",
-  "bath": "2",
-  "size": "8x5",
-  "img": "https://res.cloudinary.com/dskmjlma4/image/upload/v1660680069/rent-property/rental-in-boston-south-boston-massachusetts_l0tkte.jpg",
-  "review": "[{id:1, star: 3, comment: "Average quality"}]"
-}]
+[
+  {
+    "id": 1,
+    "location": "New York, USA",
+    "date": "12-08-20",
+    "price": "2095",
+    "type": "House",
+    "name": "Palm Harbor",
+    "address": "2699 Green Valley Highland, FL",
+    "bed": "4",
+    "bath": "2",
+    "size": "8x5",
+    "img": "https://res.cloudinary.com/dskmjlma4/image/upload/v1660680069/rent-property/rental-in-boston-south-boston-massachusetts_l0tkte.jpg",
+    "review": "[{id:1, star: 3, comment: 'Excellent quality'}]"
+  },
+  {
+    "id": 1,
+    "location": "New York, USA",
+    "date": "12-08-20",
+    "price": "2095",
+    "type": "House",
+    "name": "Palm Harbor",
+    "address": "2699 Green Valley Highland, FL",
+    "bed": "4",
+    "bath": "2",
+    "size": "8x5",
+    "img": "https://res.cloudinary.com/dskmjlma4/image/upload/v1660680069/rent-property/rental-in-boston-south-boston-massachusetts_l0tkte.jpg",
+    "review": "[{id:1, star: 3, comment: 'Excellent quality'}]"
+  },
+  {
+    "id": 1,
+    "location": "New York, USA",
+    "date": "12-08-20",
+    "price": "2095",
+    "type": "House",
+    "name": "Palm Harbor",
+    "address": "2699 Green Valley Highland, FL",
+    "bed": "4",
+    "bath": "2",
+    "size": "8x5",
+    "img": "https://res.cloudinary.com/dskmjlma4/image/upload/v1660680069/rent-property/rental-in-boston-south-boston-massachusetts_l0tkte.jpg",
+    "review": "[{id:1, star: 3, comment: 'Excellent quality'}]"
+  },
+  {
+    "id": 1,
+    "location": "New York, USA",
+    "date": "12-08-20",
+    "price": "2095",
+    "type": "House",
+    "name": "Palm Harbor",
+    "address": "2699 Green Valley Highland, FL",
+    "bed": "4",
+    "bath": "2",
+    "size": "8x5",
+    "img": "https://res.cloudinary.com/dskmjlma4/image/upload/v1660680069/rent-property/rental-in-boston-south-boston-massachusetts_l0tkte.jpg",
+    "review": "[{id:1, star: 3, comment: 'Excellent quality'}]"
+  },
+  {
+    "id": 1,
+    "location": "New York, USA",
+    "date": "12-08-20",
+    "price": "2095",
+    "type": "House",
+    "name": "Palm Harbor",
+    "address": "2699 Green Valley Highland, FL",
+    "bed": "4",
+    "bath": "2",
+    "size": "8x5",
+    "img": "https://res.cloudinary.com/dskmjlma4/image/upload/v1660680069/rent-property/rental-in-boston-south-boston-massachusetts_l0tkte.jpg",
+    "review": "[{id:1, star: 3, comment: 'Excellent quality'}]"
+  }
+]
