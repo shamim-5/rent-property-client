@@ -8,6 +8,8 @@ import Sell from "./components/Services/Sell";
 import Navbar from "./components/Shared/Navbar";
 import Login from "./components/Authentication/Login";
 import SignUp from "./components/Authentication/SignUp";
+import Footer from "./components/Shared/Footer";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </Navbar>
     </div>
   );
