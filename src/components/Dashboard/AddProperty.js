@@ -19,7 +19,16 @@ const AddProperty = () => {
       img: e.target.img.value,
       details: e.target.details.value,
     };
-    console.log(service);
+
+    fetch(`http://localhost:5000/service`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(service),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
   return (
     <div>
