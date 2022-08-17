@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import useServices from "../hooks/useServices";
+import Search from "./Search";
 
 const Rent = () => {
   const [services, setServices] = useServices();
   const [rent, setRent] = useState([]);
 
   return (
-    <div className="container py-8 space-y-3">
-      <h2 className="text-3xl text-levender text-center uppercase">Rent Property</h2>
+    <div className="container py-8 space-y-5">
+      <section className="space-y-3">
+        <div className="flex lg:flex-row flex-col justify-between py-4  border border-x-0  border-[#1D2534]">
+          <h2 className="text-3xl text-levender text-center uppercase">Search properties to rent</h2>
+          <input type="text" placeholder="Search with Search Bar" className="px-4 rounded py-2" />
+        </div>
+       
+        <Search />
+      </section>
+
       <section className="grid lg:grid-cols-3 gap-6">
         {services &&
           services.map((service) => {
