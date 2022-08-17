@@ -5,7 +5,7 @@ const Search = () => {
     <div className="flex lg:flex-row flex-col justify-between py-4  border border-x-0  border-[#1D2534]">
       <div className="space-y-2 my-2 text-center">
         <h3 className="text-steel">Location</h3>
-        <select class="select select-bordered select-sm  w-full bg-transparent">
+        <select className="select select-bordered select-sm  w-full bg-transparent">
           <option disabled selected>
             New York, USA
           </option>
@@ -20,7 +20,7 @@ const Search = () => {
       </div>
       <div className="space-y-2 my-2 text-center">
         <h3 className="text-steel">Price</h3>
-        <select class="select select-bordered select-sm  w-full bg-transparent">
+        <select className="select select-bordered select-sm  w-full bg-transparent">
           <option disabled selected>
             $5000-$25000
           </option>
@@ -31,7 +31,7 @@ const Search = () => {
       </div>
       <div className="space-y-2 my-2 text-center">
         <h3 className="text-steel">Property Type</h3>
-        <select class="select select-bordered select-sm  w-full bg-transparent">
+        <select className="select select-bordered select-sm  w-full bg-transparent">
           <option disabled selected>
             House
           </option>

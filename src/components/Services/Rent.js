@@ -13,7 +13,7 @@ const Rent = () => {
           <h2 className="text-3xl text-levender text-center uppercase">Search properties to rent</h2>
           <input type="text" placeholder="Search with Search Bar" className="px-4 rounded py-2" />
         </div>
-       
+
         <Search />
       </section>
 
@@ -24,11 +24,11 @@ const Rent = () => {
 
             return (
               <div key={id}>
-                <div class="card card-compact w-92 bg-dark shadow-xl rounded-md">
+                <div className="card card-compact w-92 bg-dark shadow-xl rounded-md">
                   <figure>
                     <img src={img} alt="" />
                   </figure>
-                  <div class="card-body">
+                  <div className="card-body">
                     <div className="flex justify-between items-center">
                       <h2>
                         <span className="font-bold text-secondary">${price}</span> /month
@@ -37,10 +37,10 @@ const Rent = () => {
                         <p>Star</p>
                       </div>
                     </div>
-                    <h2 class="card-title text-levender">{name}</h2>
+                    <h2 className="card-title text-levender">{name}</h2>
                     <p>{address}</p>
                     <hr />
-                    <div class="flex justify-between items-center">
+                    <div className="flex justify-between items-center">
                       <div>
                         <p className="flex space-x-1">
                           <img src="https://img.icons8.com/officexs/16/000000/bedroom.png" alt="" />
@@ -59,7 +59,7 @@ const Rent = () => {
                           <span>{size}m²</span>
                         </p>
                       </div>
-                      <button class="btn btn-sm btn-primary">Buy Now</button>
+                      <button className="btn btn-sm btn-primary">Buy Now</button>
                     </div>
                   </div>
                 </div>
