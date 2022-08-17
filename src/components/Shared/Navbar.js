@@ -57,10 +57,10 @@ const Navbar = ({ children }) => {
       <div className="drawer">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col ">
-          <div className="w-full navbar bg-mirage text-steel  border border-x-0 border-[#1D2534] px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24">
+          <div className="w-full navbar sticky top-0 z-40  bg-mirage text-steel  border border-x-0 border-[#1D2534] px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24">
             <div className="flex-1 px-2 mx-2 text-2xl uppercase text-grey">
               <Link className="hover:text-levender" to="/">
-                Rent A Property
+                Asha Property
               </Link>
             </div>
             <div className="flex-none hidden lg:block">
