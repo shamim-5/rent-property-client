@@ -20,7 +20,7 @@ const AddProperty = () => {
       details: e.target.details.value,
     };
 
-    fetch(`http://localhost:5000/service`, {
+    fetch(`https://rent-property.herokuapp.com/service`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

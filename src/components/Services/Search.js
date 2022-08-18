@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Search = ({setServices }) => {
+const Search = ({ setServices }) => {
   const [data, setData] = useState([]);
   const [limit, setLimit] = useState({ l: 0, h: 0 });
 
@@ -30,7 +30,7 @@ const Search = ({setServices }) => {
     const type = e.target.type.value;
     const price = e.target.price.value;
 
-    fetch(`http://localhost:5000/service?location=${location}&date=${date}&type=${type}`, {
+    fetch(`https://rent-property.herokuapp.com/service?location=${location}&date=${date}&type=${type}`, {
       method: "GET",
     })
       .then((res) => res.json())
