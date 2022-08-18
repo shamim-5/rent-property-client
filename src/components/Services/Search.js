@@ -6,16 +6,16 @@ const Search = ({ services, setServices }) => {
 
   useEffect(() => {
     if (limit.l === 0 && limit.h === 25000) {
-      const exist = data.filter((d) => d.price > limit.l && d.price < limit.h);
+      const exist = data.filter((d) => d.price >= limit.l && d.price <= limit.h);
       setServices(exist);
     } else if (limit.l === 25000 && limit.h === 50000) {
-      const exist = data.filter((d) => d.price > limit.l && d.price < limit.h);
+      const exist = data.filter((d) => d.price >= limit.l && d.price <= limit.h);
       setServices(exist);
     } else if (limit.l === 50000 && limit.h === 100000) {
-      const exist = data.filter((d) => d.price > limit.l && d.price < limit.h);
+      const exist = data.filter((d) => d.price >= limit.l && d.price <= limit.h);
       setServices(exist);
     } else if (limit.l === 100000 && limit.h === 20000000) {
-      const exist = data.filter((d) => d.price > limit.l && d.price < limit.h);
+      const exist = data.filter((d) => d.price >= limit.l && d.price <= limit.h);
       setServices(exist);
     } else {
       setServices(data);
