@@ -9,7 +9,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   if (user) {
-    navigate("/login");
+    navigate("/");
   }
   if (loading) {
     return <Loading />;

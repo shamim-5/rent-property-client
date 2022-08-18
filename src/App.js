@@ -11,6 +11,7 @@ import SignUp from "./components/Authentication/SignUp";
 import Footer from "./components/Shared/Footer";
 import NotFound from "./components/NotFound";
 import AddProperty from "./components/Dashboard/AddProperty";
+import RequireAuth from "./components/Authentication/RequireAuth";
 
 function App() {
   return (
@@ -18,7 +19,14 @@ function App() {
       <Navbar>
         <Routes>
           <Route path="/" element={<Rent />} />
-          <Route path="/add" element={<AddProperty />} />
+          <Route
+            path="/add"
+            element={
+              <RequireAuth>
+                <AddProperty />
+              </RequireAuth>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<NotFound />} />
