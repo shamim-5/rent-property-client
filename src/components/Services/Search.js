@@ -61,11 +61,11 @@ const Search = ({ setServices }) => {
           <div className="space-y-2 my-2 text-center">
             <h3 className="text-steel">Location</h3>
             <select name="location" className="select select-bordered select-sm  w-full bg-transparent">
-              <option value="7">New York, USA</option>
-              <option value="8">Arlington, Texas</option>
-              <option value="9">Centerville, Georgia</option>
-              <option value="10">Lebanon, Ohio</option>
-              <option value="11">Washington, D.C.</option>
+              <option value="New York, USA">New York, USA</option>
+              <option value="Arlington, Texas">Arlington, Texas</option>
+              <option value="Centerville, Georgia">Centerville, Georgia</option>
+              <option value="Lebanon, Ohio">Lebanon, Ohio</option>
+              <option value="Washington, D.C.">Washington, D.C.</option>
             </select>
           </div>
           <div className="space-y-2 my-2 text-center">
@@ -80,17 +80,17 @@ const Search = ({ setServices }) => {
           <div className="space-y-2 my-2 text-center">
             <h3 className="text-steel">Price</h3>
             <select name="price" className="select select-bordered select-sm  w-full bg-transparent">
-              <option value="12">$0000-$25000</option>
-              <option value="13">$25000-$50000</option>
-              <option value="14">$50000-$100000</option>
-              <option value="15">$100000-$20000000</option>
+              <option value="$0000-$25000">$0000-$25000</option>
+              <option value="$25000-$50000">$25000-$50000</option>
+              <option value="$50000-$100000">$50000-$100000</option>
+              <option value="$100000-$20000000">$100000-$20000000</option>
             </select>
           </div>
           <div className="space-y-2 my-2 text-center">
             <h3 className="text-steel">Property Type</h3>
             <select name="type" className="select select-bordered select-sm  w-full bg-transparent">
-              <option value="16">House</option>
-              <option value="17">Flat</option>
+              <option value="House">House</option>
+              <option value="Flat">Flat</option>
             </select>
           </div>
           <input type="submit" value="Search" className="btn btn-primary my-auto" />

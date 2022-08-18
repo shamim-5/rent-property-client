@@ -54,11 +54,11 @@ const AddProperty = () => {
                         <span className="label-text text-grey">Location</span>
                       </label>
                       <select name="location" className="select select-bordered w-full">
-                        <option value="0">New York, USA</option>
-                        <option value="1">Arlington, Texas</option>
-                        <option value="2">Centerville, Georgia</option>
-                        <option value="3">Lebanon, Ohio</option>
-                        <option value="4">Washington, D.C.</option>
+                        <option value="New York, USA">New York, USA</option>
+                        <option value="Arlington, Texas">Arlington, Texas</option>
+                        <option value="Centerville, Georgia">Centerville, Georgia</option>
+                        <option value="Lebanon, Ohio">Lebanon, Ohio</option>
+                        <option value="Washington, D.C.">Washington, D.C.</option>
                       </select>
                     </div>
                     <div className="form-control w-full">
@@ -80,8 +80,8 @@ const AddProperty = () => {
                         <span className="label-text text-grey">Type</span>
                       </label>
                       <select name="type" className="select select-bordered  w-full">
-                        <option value="5">House</option>
-                        <option value="6">Flat</option>
+                        <option value="House">House</option>
+                        <option value="Flat">Flat</option>
                       </select>
                     </div>
                     <div className="form-control">
