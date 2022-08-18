@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const AddProperty = () => {
   const handleSubmit = (e) => {
@@ -28,7 +29,7 @@ const AddProperty = () => {
       body: JSON.stringify(service),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => toast("Item Successfully Added !"));
   };
   return (
     <div>
