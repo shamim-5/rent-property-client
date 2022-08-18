@@ -3,14 +3,17 @@ import React from "react";
 const Search = ({ services, setServices }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    const query = {
-      location: e.target.location.value,
-      date: e.target.date.value,
-      // price: e.target.price.value,
-      type: e.target.type.value,
-    };
-    console.log(query);
- 
+
+    const location = e.target.location.value;
+    const date = e.target.date.value;
+    const type = e.target.type.value;
+    // const price = e.target.price.value;
+
+    fetch(`http://localhost:5000/service?location=${location}&date=${date}&type=${type}`, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
 
   return (
@@ -52,9 +55,7 @@ const Search = ({ services, setServices }) => {
               <option>Flat</option>
             </select>
           </div>
-          <button type="submit" className="btn btn-primary my-auto">
-            Search
-          </button>
+          <input type="submit" value="Search" className="btn btn-primary my-auto" />
         </div>
       </form>
     </div>
