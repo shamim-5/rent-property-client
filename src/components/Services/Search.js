@@ -2,20 +2,20 @@ import React, { useEffect, useState } from "react";
 
 const Search = ({ services, setServices }) => {
   const [data, setData] = useState([]);
-  const [limit, setLimit] = useState(0);
+  const [limit, setLimit] = useState({ l: 0, h: 0 });
 
   useEffect(() => {
-    if (limit === 25000) {
-      const exist = data.filter((d) => d.price < limit);
+    if (limit.l === 0 && limit.h === 25000) {
+      const exist = data.filter((d) => d.price > limit.l && d.price < limit.h);
       setServices(exist);
-    } else if (limit === 50000) {
-      const exist = data.filter((d) => d.price < limit);
+    } else if (limit.l === 25000 && limit.h === 50000) {
+      const exist = data.filter((d) => d.price > limit.l && d.price < limit.h);
       setServices(exist);
-    } else if (limit === 100000) {
-      const exist = data.filter((d) => d.price < limit);
+    } else if (limit.l === 50000 && limit.h === 100000) {
+      const exist = data.filter((d) => d.price > limit.l && d.price < limit.h);
       setServices(exist);
-    } else if (limit === 20000000) {
-      const exist = data.filter((d) => d.price < limit);
+    } else if (limit.l === 100000 && limit.h === 20000000) {
+      const exist = data.filter((d) => d.price > limit.l && d.price < limit.h);
       setServices(exist);
     } else {
       setServices(data);
@@ -42,19 +42,17 @@ const Search = ({ services, setServices }) => {
       });
 
     if (price === "$0000-$25000") {
-      return setLimit(25000);
+      return setLimit({ l: 0, h: 25000 });
     } else if (price === "$25000-$50000") {
-      return setLimit(50000);
+      return setLimit({ l: 25000, h: 50000 });
     } else if (price === "$50000-$100000") {
-      return setLimit(100000);
+      return setLimit({ l: 50000, h: 100000 });
     } else if (price === "$100000-$20000000") {
-      return setLimit(20000000);
+      return setLimit({ l: 100000, h: 20000000 });
     } else {
       console.log("Invalid price");
     }
   };
-
-  console.log(services);
 
   return (
     <div>
