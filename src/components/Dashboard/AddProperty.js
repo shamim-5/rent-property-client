@@ -48,7 +48,13 @@ const AddProperty = () => {
                       <label className="label">
                         <span className="label-text text-grey">Property Code</span>
                       </label>
-                      <input type="number" name="code" placeholder="Property Code" className="input input-bordered" />
+                      <input
+                        type="number"
+                        name="code"
+                        placeholder="Property Code"
+                        className="input input-bordered"
+                        required
+                      />
                     </div>
                     <div className="form-control w-full">
                       <label className="label">
@@ -66,13 +72,25 @@ const AddProperty = () => {
                       <label className="label">
                         <span className="label-text text-grey">Date</span>
                       </label>
-                      <input type="date" name="date" placeholder="Enter Date" className="input input-bordered" />
+                      <input
+                        type="date"
+                        name="date"
+                        placeholder="Enter Date"
+                        className="input input-bordered"
+                        required
+                      />
                     </div>
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text text-grey">Price</span>
                       </label>
-                      <input type="number" name="price" placeholder="Enter Price" className="input input-bordered" />
+                      <input
+                        type="number"
+                        name="price"
+                        placeholder="Enter Price"
+                        className="input input-bordered"
+                        required
+                      />
                     </div>
                   </div>
                   <div className="flex lg:flex-row flex-col lg:space-x-4 ">
@@ -89,19 +107,37 @@ const AddProperty = () => {
                       <label className="label">
                         <span className="label-text text-grey">Property Name</span>
                       </label>
-                      <input type="text" name="name" placeholder="Property Name" className="input input-bordered" />
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Property Name"
+                        className="input input-bordered"
+                        required
+                      />
                     </div>
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text text-grey">Address</span>
                       </label>
-                      <input type="text" name="address" placeholder="Enter Address" className="input input-bordered" />
+                      <input
+                        type="text"
+                        name="address"
+                        placeholder="Enter Address"
+                        className="input input-bordered"
+                        required
+                      />
                     </div>
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text text-grey">Bed</span>
                       </label>
-                      <input type="number" name="bed" placeholder="Noumber of Bed" className="input input-bordered" />
+                      <input
+                        type="number"
+                        name="bed"
+                        placeholder="Noumber of Bed"
+                        className="input input-bordered"
+                        required
+                      />
                     </div>
                   </div>
                   <div className="flex lg:flex-row flex-col lg:space-x-4 ">
@@ -109,7 +145,13 @@ const AddProperty = () => {
                       <label className="label">
                         <span className="label-text text-grey">Bathroom</span>
                       </label>
-                      <input type="number" name="bath" placeholder="No of Bathroom" className="input input-bordered" />
+                      <input
+                        type="number"
+                        name="bath"
+                        placeholder="No of Bathroom"
+                        className="input input-bordered"
+                        required
+                      />
                     </div>
                     <div className="form-control">
                       <label className="label">
@@ -120,6 +162,7 @@ const AddProperty = () => {
                         name="length"
                         placeholder="Length of Property"
                         className="input input-bordered"
+                        required
                       />
                     </div>
                     <div className="form-control">
@@ -131,6 +174,7 @@ const AddProperty = () => {
                         name="width"
                         placeholder="Width of Property"
                         className="input input-bordered"
+                        required
                       />
                     </div>
                     <div className="form-control">
@@ -157,7 +201,7 @@ const AddProperty = () => {
                   </div>
                 </div>
                 <div className="form-control mt-6">
-                  <input type="submit" value="Add Property" className="btn btn-primary" />
+                  <input type="submit" value="Add Property" className="btn btn-primary" required />
                 </div>
               </form>
             </div>
