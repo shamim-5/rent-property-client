@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import Loading from "../Shared/Loading";
 
 const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
@@ -11,7 +12,7 @@ const SignUp = () => {
     navigate("/login");
   }
   if (loading) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
   let signUpError;
   if (error) {

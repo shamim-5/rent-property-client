@@ -2,6 +2,7 @@ import React from "react";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import Loading from "../Shared/Loading";
 
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
@@ -12,7 +13,7 @@ const Login = () => {
     navigate("/");
   }
   if (loading || gLoading) {
-    return <p>Loading</p>;
+    return <Loading />;
   }
   let logInError;
   if (error || gError) {
