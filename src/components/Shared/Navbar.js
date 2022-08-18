@@ -1,7 +1,15 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const Navbar = ({ children }) => {
+  const [user] = useAuthState(auth);
+
+  const logOut = () => {
+    signOut(auth);
+  };
 
   const menuItems = (
     <>
@@ -11,23 +19,8 @@ const Navbar = ({ children }) => {
         </Link>
       </li>
       <li>
-        <Link className="hover:text-levender" to="/rent">
+        <Link className="hover:text-levender" to="/">
           Rent
-        </Link>
-      </li>
-      <li>
-        <Link className="hover:text-levender" to="/buy">
-          Buy
-        </Link>
-      </li>
-      <li>
-        <Link className="hover:text-levender" to="/sell">
-          Sell
-        </Link>
-      </li>
-      <li>
-        <Link className="hover:text-levender" to="/manage">
-          Manage Properties
         </Link>
       </li>
       <li>
@@ -35,16 +28,19 @@ const Navbar = ({ children }) => {
           Add Property
         </Link>
       </li>
-      <li>
-        <Link className="hover:text-levender" to="/resources">
-          resources
-        </Link>
-      </li>
-      <li>
-        <Link className="hover:text-levender" to="/login">
-          Login
-        </Link>
-      </li>
+      {user ? (
+        <li>
+          <Link onClick={logOut} className="hover:text-levender" to="/login">
+            Logout
+          </Link>
+        </li>
+      ) : (
+        <li>
+          <Link className="hover:text-levender" to="/login">
+            Login
+          </Link>
+        </li>
+      )}
       <li>
         <Link className="hover:text-levender" to="/signup">
           Sign up

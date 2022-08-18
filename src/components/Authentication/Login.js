@@ -22,7 +22,7 @@ const Login = () => {
       </p>
     );
   }
-  console.log(logInError);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;

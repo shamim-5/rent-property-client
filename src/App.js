@@ -17,13 +17,8 @@ function App() {
     <div>
       <Navbar>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/rent" element={<Rent />} />
-          <Route path="/buy" element={<Buy />} />
-          <Route path="/sell" element={<Sell />} />
-          <Route path="/manage" element={<ManageProperty />} />
+          <Route path="/" element={<Rent />} />
           <Route path="/add" element={<AddProperty />} />
-          <Route path="/resources" element={<Resources />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<NotFound />} />
