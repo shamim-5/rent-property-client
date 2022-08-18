@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Search = ({ services, setServices }) => {
+const Search = ({setServices }) => {
   const [data, setData] = useState([]);
   const [limit, setLimit] = useState({ l: 0, h: 0 });
 

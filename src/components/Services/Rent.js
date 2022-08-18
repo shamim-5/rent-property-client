@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import useServices from "../hooks/useServices";
 import Search from "./Search";
 
 const Rent = () => {
   const [services, setServices] = useServices();
-  const [rent, setRent] = useState([]);
 
   return (
     <div className="container py-8 space-y-5">
