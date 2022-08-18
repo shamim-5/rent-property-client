@@ -19,10 +19,10 @@ const Rent = () => {
       <section className="grid lg:grid-cols-3 gap-6">
         {services &&
           services.map((service) => {
-            const { id, price, type, name, address, date, bed, bath, length, width, img, review } = service;
+            const { _id, price, type, name, address, date, bed, bath, length, width, img, review } = service;
 
             return (
-              <div key={id}>
+              <div key={_id}>
                 <div className="card card-compact w-92 bg-dark shadow-xl rounded-md">
                   <figure>
                     <img src={img} alt="" />
