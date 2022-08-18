@@ -1,12 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const Login = () => {
+  const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const navigate = useNavigate();
+
+  if (user || gUser) {
+    navigate("/");
+  }
+  if (loading || gLoading) {
+    return <p>Loading</p>;
+  }
+  let logInError;
+  if (error || gError) {
+    logInError = (
+      <p className="text-secondary">
+        <small>{error?.message || gError.message}</small>
+      </p>
+    );
+  }
+  console.log(logInError);
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    signInWithEmailAndPassword(email, password);
   };
   return (
     <div>
@@ -44,19 +65,23 @@ const Login = () => {
                     />
                   </div>
                 </div>
-
+                {logInError}
                 <div className="form-control mt-6">
                   <input type="submit" value="Login" className="btn btn-primary" />
                 </div>
               </form>
               <Link to="/signup">
                 <p className="text-steel">
-                  <small>Don't Have Any Account ?</small> <small className="link link-secondary">Please Register</small>
+                  <small>Don't Have Any Account ?</small> <small className="link link-primary">Please Register</small>
                 </p>
               </Link>
-              <p className="text-info hover:text-secondary rounded py-2 uppercase font-semibold text-center border border-steel">
+              <div className="divider text-steel">OR</div>
+              <button
+                onClick={() => signInWithGoogle()}
+                className="text-info hover:text-secondary rounded py-2 uppercase font-semibold text-center border border-steel"
+              >
                 Continue with google
-              </p>
+              </button>
             </div>
           </div>
         </div>

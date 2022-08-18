@@ -1,13 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const SignUp = () => {
+  const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+
+  if (user) {
+    navigate("/login");
+  }
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  let signUpError;
+  if (error) {
+    signUpError = (
+      <p className="text-secondary">
+        <small>{error?.message}</small>
+      </p>
+    );
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    createUserWithEmailAndPassword(email, password);
   };
+
   return (
     <div>
       <div className="hero min-h-screen">
@@ -56,14 +77,14 @@ const SignUp = () => {
                     />
                   </div>
                 </div>
-
+                {signUpError}
                 <div className="form-control mt-6">
                   <input type="submit" value="Login" className="btn btn-primary" />
                 </div>
               </form>
               <Link to="/login">
                 <p className="text-steel">
-                  <small>Already Registered?</small> <small className="link link-secondary">Please Login</small>
+                  <small>Already Registered?</small> <small className="link link-primary">Please Login</small>
                 </p>
               </Link>
             </div>
